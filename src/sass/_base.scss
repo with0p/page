@@ -1,0 +1,35 @@
+$font-color-primary: #777777;
+$color-grey: #e7e4e4;
+$color-purple: #627e9a;
+
+$color-omnifood: #e67e22;
+$color-mapty: #00c46a;
+$color-natour: #28b485;
+$color-forkify: #f48982;
+$color-trillo: #ff3366;
+$color-nexter: #c69963;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: [ls-start] 1fr [ls-end cont-start] 4fr [cont-end rs-start] 1fr [rs-end];
+  background-image: linear-gradient(to right, rgba(#fff, 0.7), rgba(#fff, 0.7)),
+    url(../img/background4.jpg);
+  background-size: cover;
+}
+
+section {
+  padding: 3rem 0 10rem 0;
+}

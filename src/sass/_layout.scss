@@ -1,0 +1,60 @@
+.header {
+  grid-column: ls-start/rs-end;
+  display: flex;
+  align-items: center;
+  justify-self: flex-start;
+  padding: 1rem;
+}
+
+.intro {
+  display: none;
+  grid-column: cont-start/cont-end;
+
+  &__person {
+    grid-column: cont-start/cont-end;
+    display: grid;
+    grid-template-columns: min-content minmax(min-content, max-content);
+    column-gap: 3rem;
+    justify-content: center;
+  }
+  &__photo {
+    height: 15vw;
+    display: block;
+    border-radius: 1rem;
+  }
+
+  &__info {
+    color: #ccc;
+    font-size: 4rem;
+  }
+}
+
+.projects {
+  grid-column: cont-start/cont-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.experience {
+  grid-column: ls-start/rs-end;
+  background-color: rgba($color-purple, 0.03);
+}
+
+.contact {
+  grid-column: cont-start/cont-end;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: stretch;
+  padding: 3rem 0;
+  &__heading {
+    margin-bottom: 2rem;
+  }
+}
+
+.footer {
+  background-color: rgba($color-purple, 0.03);
+  grid-column: ls-start/rs-end;
+}

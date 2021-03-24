@@ -1,0 +1,70 @@
+body {
+  font-family: "Nunito", sans-serif;
+}
+body,
+.heading-1,
+.heading-2,
+.heading-3,
+.paragraph {
+  font-weight: 300;
+  color: $font-color-primary;
+
+  &--light {
+    color: #eee;
+  }
+}
+
+.heading-1 {
+  font-size: 4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: $color-purple 1px;
+  margin-bottom: 4rem;
+  letter-spacing: 1rem;
+  text-align: center;
+}
+
+.heading-2 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: $color-purple 1px;
+}
+
+.heading-3 {
+  font-size: 2rem;
+  color: $color-purple;
+  text-transform: lowercase;
+  font-weight: 400;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.mb-l {
+  margin-bottom: 3rem;
+}
+
+.mb-m {
+  margin-bottom: 2rem;
+}
+
+.mb-s {
+  margin-bottom: 1rem;
+}
+
+.mt-l {
+  margin-top: 3rem;
+}
+
+.mt-m {
+  margin-top: 2rem;
+}
+
+.mt-s {
+  margin-top: 1rem;
+}
