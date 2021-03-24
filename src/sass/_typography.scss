@@ -21,7 +21,7 @@ body,
   color: transparent;
   -webkit-text-stroke: $color-purple 1px;
   margin-bottom: 4rem;
-  letter-spacing: 1rem;
+  letter-spacing: 0.5rem;
   text-align: center;
 }
 
@@ -36,8 +36,7 @@ body,
 .heading-3 {
   font-size: 2rem;
   color: $color-purple;
-  text-transform: lowercase;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .paragraph {

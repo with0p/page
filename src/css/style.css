@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -15,9 +14,6 @@ html {
   grid-template-columns: [ls-start] 1fr [ls-end cont-start] 4fr [cont-end rs-start] 1fr [rs-end];
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../img/background4.jpg);
   background-size: cover; }
-
-section {
-  padding: 3rem 0 10rem 0; }
 
 body {
   font-family: "Nunito", sans-serif; }
@@ -43,7 +39,7 @@ body,
   color: transparent;
   -webkit-text-stroke: #627e9a 1px;
   margin-bottom: 4rem;
-  letter-spacing: 1rem;
+  letter-spacing: 0.5rem;
   text-align: center; }
 
 .heading-2 {
@@ -56,8 +52,7 @@ body,
 .heading-3 {
   font-size: 2rem;
   color: #627e9a;
-  text-transform: lowercase;
-  font-weight: 400; }
+  font-weight: 600; }
 
 .paragraph {
   font-size: 1.6rem;
@@ -110,11 +105,13 @@ body,
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  padding-bottom: 10rem; }
 
 .experience {
   grid-column: ls-start/rs-end;
-  background-color: rgba(98, 126, 154, 0.03); }
+  background-color: rgba(98, 126, 154, 0.03);
+  padding: 3rem 0 10rem 0; }
 
 .contact {
   grid-column: cont-start/cont-end;
@@ -138,7 +135,7 @@ body,
     filter: opacity(100%); }
     .header:hover .header__name--2:before {
       transform: scaleY(1);
-      height: 100%; }
+      font-size: inherit; }
   .header:hover .header__photo {
     border-color: #627e9a;
     transform: scaleX(1);
@@ -165,37 +162,15 @@ body,
       .header__name--2::before {
         content: "junior";
         display: block;
-        height: 0;
+        font-size: 0;
         transform: scaleY(0);
-        transition: all 0.2s; }
+        transition: all 0.4s; }
 
 .projects__heading {
   text-align: center;
   position: relative;
   display: inline-block;
-  cursor: pointer;
   transition: all 0.5s; }
-  .projects__heading::before {
-    position: absolute;
-    display: inline-block;
-    content: "пока только учебные ¯\_(ツ)_/¯";
-    top: -2rem;
-    left: -80%;
-    width: 20rem;
-    padding: 3px 2px;
-    border: 1px solid #627e9a;
-    border-radius: 1rem;
-    font-size: 1.2rem;
-    font-weight: 200;
-    color: #627e9a;
-    letter-spacing: 2px;
-    -webkit-text-stroke: none;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: all 0.5s; }
-  .projects__heading:hover::before {
-    opacity: 1;
-    transform: translateY(0); }
 
 .projects-gallery {
   width: 100%;

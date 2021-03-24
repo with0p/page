@@ -8,7 +8,8 @@
       filter: opacity(100%);
       &--2:before {
         transform: scaleY(1);
-        height: 100%;
+        font-size: inherit;
+        // height: 100%;
         // content: "junior";
       }
     }
@@ -47,9 +48,10 @@
       &::before {
         content: "junior";
         display: block;
-        height: 0;
+        // height: 0;
+        font-size: 0;
         transform: scaleY(0);
-        transition: all 0.2s;
+        transition: all 0.4s;
       }
     }
   }
@@ -59,35 +61,35 @@
   text-align: center;
   position: relative;
   display: inline-block;
-  cursor: pointer;
+  // cursor: pointer;
   transition: all 0.5s;
 
-  &::before {
-    position: absolute;
-    display: inline-block;
-    content: "пока только учебные ¯\_(ツ)_/¯";
-    top: -2rem;
-    left: -80%;
-    width: 20rem;
-    padding: 3px 2px;
-    border: 1px solid $color-purple;
-    border-radius: 1rem;
-    font-size: 1.2rem;
-    font-weight: 200;
-    color: $color-purple;
-    letter-spacing: 2px;
-    -webkit-text-stroke: none;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: all 0.5s;
-  }
+  // &::before {
+  //   position: absolute;
+  //   display: inline-block;
+  //   content: "пока только учебные ¯\\_(ツ)_/¯";
+  //   top: -2rem;
+  //   left: -80%;
+  //   width: 20rem;
+  //   padding: 3px 2px;
+  //   border: 1px solid $color-purple;
+  //   border-radius: 1rem;
+  //   font-size: 1.2rem;
+  //   font-weight: 200;
+  //   color: $color-purple;
+  //   letter-spacing: 2px;
+  //   -webkit-text-stroke: none;
+  //   opacity: 0;
+  //   transform: translateY(100%);
+  //   transition: all 0.5s;
+  // }
 
-  &:hover {
-    &::before {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+  // &:hover {
+  //   &::before {
+  //     opacity: 1;
+  //     transform: translateY(0);
+  //   }
+  // }
 }
 
 .projects-gallery {
