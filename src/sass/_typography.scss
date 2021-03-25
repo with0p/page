@@ -1,5 +1,5 @@
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 body,
 .heading-1,
@@ -16,13 +16,23 @@ body,
 
 .heading-1 {
   font-size: 4rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  color: transparent;
   -webkit-text-stroke: $color-purple 1px;
+  color: #fff;
   margin-bottom: 4rem;
   letter-spacing: 0.5rem;
   text-align: center;
+
+  &::after {
+    content: "";
+    display: none;
+    width: 100%;
+    height: 0.5rem;
+    color: white;
+    box-shadow: 0 0 2rem 0 #0061f3;
+    border-radius: 1rem;
+  }
 }
 
 .heading-2 {
@@ -42,28 +52,4 @@ body,
 .paragraph {
   font-size: 1.6rem;
   text-transform: uppercase;
-}
-
-.mb-l {
-  margin-bottom: 3rem;
-}
-
-.mb-m {
-  margin-bottom: 2rem;
-}
-
-.mb-s {
-  margin-bottom: 1rem;
-}
-
-.mt-l {
-  margin-top: 3rem;
-}
-
-.mt-m {
-  margin-top: 2rem;
-}
-
-.mt-s {
-  margin-top: 1rem;
 }

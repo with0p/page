@@ -20,12 +20,13 @@ $color-nexter: #c69963;
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .container {
   display: grid;
   grid-template-columns: [ls-start] 1fr [ls-end cont-start] 4fr [cont-end rs-start] 1fr [rs-end];
-  background-image: linear-gradient(to right, rgba(#fff, 0.7), rgba(#fff, 0.7)),
-    url(../img/background4.jpg);
+  background-image: linear-gradient(to right, rgba(#fff, 0.9), rgba(#fff, 0.9)),
+    url(../img/background5.jpg);
   background-size: cover;
 }

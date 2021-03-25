@@ -8,9 +8,14 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,600;1,300&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,600&display=swap" rel="stylesheet">
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,300&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="src/css/style.css" />
     <link rel="shortcut icon" type="image/png" href="src/img/favicon.png" />
@@ -20,148 +25,243 @@
   <body>
     <div class="container">
       <header class="header">
-
-        <div class="header__name">
-            <h1 class="header__name--1 heading-2">Мария Жакова</h1>
-            <h3 class="header__name--2">Front-end developer</h2>
-          
-        </div>
-        <img
-        src="src/img/profile_photo.jpg"
-        alt="Profile photo"
-        class="header__photo"
-      />
-      </header>
-      <section class="intro">
-        <div class="intro__person">
-            <img
-            src="src/img/profile_photo.jpg"
+        <div class="header__person">
+          <img
+            src="src/img/header-photo.jpg"
             alt="Profile photo"
-            class="intro__photo"
+            class="header__photo"
           />
-          <div class="intro__info">
-              &#60;div&#62;
-              <p class="heading-1">Привет,</p>
-              <p class="heading-2 mb-m">я начинающий front-end разработчик.</p>
-              <p class="paragraph mb-s">Сейчас я могу сделать вот такой сайт</p>
-                  &#60;/div&#62;
+          <div class="header__info">
+            <p class="header__info--1"><span>Привет!</span></p>
+            <p class="header__info--2">
+              Меня зовут <span>Маша</span><br />Я хочу создавать удобные и
+              красивые <span>интерфейсы</span>
+            </p>
+            <p class="header__info--4">
+              За <span>8</span> лет в <span>IT</span> я хорошо изучила процесс
+              продуктовой разработки и сейчас развиваю свои <span>HTML</span>,
+              <span>CSS</span> и <span>Javascript</span> навыки
+            </p>
+            <p class="header__info--5">
+              Мои <a href="#projects">учебные проекты</a>,
+              <a href="#exp">опыт работы</a> и <a href="#contacts">контакты</a>
+              <span> &#11167;</span>
+            </p>
           </div>
-      </section>
-      <section class="projects">
-          <p class="heading-1"><span class="projects__heading" >проекты</span></p>
-          <div class="projects-gallery">
-            <div class="project omni">
-                <img src="src/img/projects_icons/omni.png" alt="omni" class="project__logo">
-                <a href="https://with0p.github.io/omnifood/" class="project__name" target="_blank">Omnifood</a>
-                <div class="project__desc">
-                    <p>Доставка полезных продуктов</p>
-                    <ul>
-                        <li>HTML/CSS</li>
-                        <li>Float</li>
-                        <li>Работа с изображениями</li>
-                    </ul>
-                    <a href="https://github.com/with0p/omnifood" class="project__github" target="_blank"><img src="src/img/GitHub_Logo.png" alt="git" class="project__github--logo"></a>
-              </div>
-            </div>
-            <div class="project mapty">
-                <img src="src/img/projects_icons/mapty.png" alt="mapty" class="project__logo">
-              <a href="https://with0p.github.io/mapty/" class="project__name" target="_blank">Mapty</a>
-              <div class="project__desc">
-                  <p>Трекинг спортивных активностей</p>
-                <ul>
-                    <li>Javascript</li>
-                    <li>Классы и наследование</li>
-                    <li>Leaflet</li>
-                </ul>
-                <a href="https://github.com/with0p/mapty" class="project__github" target="_blank"><img src="src/img/GitHub_Logo.png" alt="git" class="project__github--logo"></a>
-              </div>
-            </div>
-            <div class="project trillo">
-              <img src="src/img/projects_icons/trillo.png" alt="trillo" class="project__logo">
-            <a href="https://with0p.github.io/trillo/" class="project__name" target="_blank">trillo</a>
+        </div>
+      </header>
+      <section class="projects" id="projects">
+        <p class="heading-1"><span class="projects__heading">проекты</span></p>
+        <div class="projects-gallery">
+          <div class="project omni">
+            <img
+              src="src/img/projects_icons/omni.png"
+              alt="omni"
+              class="project__logo"
+            />
+            <a
+              href="https://with0p.github.io/omnifood/"
+              class="project__name"
+              target="_blank"
+              >Omnifood</a
+            >
             <div class="project__desc">
-                <p>Поиск отелей</p>
+              <p>Доставка полезных продуктов</p>
               <ul>
-                  <li>HTML/CSS</li>
-                  <li>Flex</li>
-                  <li>Адаптивная верстка</li>
+                <li>HTML/CSS</li>
+                <li>Float</li>
+                <li>Работа с изображениями</li>
               </ul>
-               <a href="https://github.com/with0p/trillo" class="project__github" target="_blank"><img src="src/img/GitHub_Logo.png" alt="git" class="project__github--logo"></a>
+              <a
+                href="https://github.com/with0p/omnifood"
+                class="project__github"
+                target="_blank"
+                ><img
+                  src="src/img/GitHub_Logo.png"
+                  alt="git"
+                  class="project__github--logo"
+              /></a>
             </div>
           </div>
-            <div class="project natour">
-                <img src="src/img/projects_icons/natour.png" alt="natour" class="project__logo">
-              <a href="https://with0p.github.io/natour/" class="project__name" target="_blank">Natours</a>
-              <div class="project__desc">
-                  <p>Выбор и бронирование туристических походов</p>
-                <ul>
-                    <li>HTML/CSS</li>
-                    <li>Float + custom grid</li>
-                    <li>SASS</li>
-                </ul>
-                 <a href="https://github.com/with0p/natour" class="project__github" target="_blank"><img src="src/img/GitHub_Logo.png" alt="git" class="project__github--logo"></a>
-              </div>
-            </div>
-            <div class="project forkify">
-                <img src="src/img/projects_icons/forkify.png" alt="forkify" class="project__logo">
-              <a href="https://with0p.github.io/forkify/" class="project__name" target="_blank">Forkify</a>
-              <div class="project__desc">
-                  <p>Поиск и создание рецептов</p>
-                <ul>
-                  <li>Javascript</li>
-                  <li>Аsync/await</li>
-                  <li>Parcel</li>
-                </ul>
-                 <a href="https://github.com/with0p/forkify" class="project__github" target="_blank"><img src="src/img/GitHub_Logo.png" alt="git" class="project__github--logo"></a>
-              </div>
-            </div>
-            <div class="project nexter">
-                <img src="src/img/projects_icons/nexter.png" alt="nexter" class="project__logo">
-              <a href="https://with0p.github.io/nexter/" class="project__name" target="_blank">Nexter</a>
-              <div class="project__desc">
-                  <p>Недвижимость и риэлторские услуги</p>
-                <ul>
-                  <li>HTML/CSS</li>
-                  <li>Grid</li>
-                  <li>Адаптивная верстка</li>
-                </ul>
-                 <a href="https://github.com/with0p/nexter" class="project__github" target="_blank"><img src="src/img/GitHub_Logo.png" alt="git" class="project__github--logo"></a>
-              </div>
+          <div class="project mapty">
+            <img
+              src="src/img/projects_icons/mapty.png"
+              alt="mapty"
+              class="project__logo"
+            />
+            <a
+              href="https://with0p.github.io/mapty/"
+              class="project__name"
+              target="_blank"
+              >Mapty</a
+            >
+            <div class="project__desc">
+              <p>Трекинг спортивных активностей</p>
+              <ul>
+                <li>Javascript</li>
+                <li>Классы и наследование</li>
+                <li>Leaflet</li>
+              </ul>
+              <a
+                href="https://github.com/with0p/mapty"
+                class="project__github"
+                target="_blank"
+                ><img
+                  src="src/img/GitHub_Logo.png"
+                  alt="git"
+                  class="project__github--logo"
+              /></a>
             </div>
           </div>
-
+          <div class="project trillo">
+            <img
+              src="src/img/projects_icons/trillo.png"
+              alt="trillo"
+              class="project__logo"
+            />
+            <a
+              href="https://with0p.github.io/trillo/"
+              class="project__name"
+              target="_blank"
+              >trillo</a
+            >
+            <div class="project__desc">
+              <p>Поиск отелей</p>
+              <ul>
+                <li>HTML/CSS</li>
+                <li>Flex</li>
+                <li>Адаптивная верстка</li>
+              </ul>
+              <a
+                href="https://github.com/with0p/trillo"
+                class="project__github"
+                target="_blank"
+                ><img
+                  src="src/img/GitHub_Logo.png"
+                  alt="git"
+                  class="project__github--logo"
+              /></a>
+            </div>
+          </div>
+          <div class="project natour">
+            <img
+              src="src/img/projects_icons/natour.png"
+              alt="natour"
+              class="project__logo"
+            />
+            <a
+              href="https://with0p.github.io/natour/"
+              class="project__name"
+              target="_blank"
+              >Natours</a
+            >
+            <div class="project__desc">
+              <p>Выбор и бронирование туристических походов</p>
+              <ul>
+                <li>HTML/CSS</li>
+                <li>Float + custom grid</li>
+                <li>SASS</li>
+              </ul>
+              <a
+                href="https://github.com/with0p/natour"
+                class="project__github"
+                target="_blank"
+                ><img
+                  src="src/img/GitHub_Logo.png"
+                  alt="git"
+                  class="project__github--logo"
+              /></a>
+            </div>
+          </div>
+          <div class="project forkify">
+            <img
+              src="src/img/projects_icons/forkify.png"
+              alt="forkify"
+              class="project__logo"
+            />
+            <a
+              href="https://with0p.github.io/forkify/"
+              class="project__name"
+              target="_blank"
+              >Forkify</a
+            >
+            <div class="project__desc">
+              <p>Поиск и создание рецептов</p>
+              <ul>
+                <li>Javascript</li>
+                <li>Аsync/await</li>
+                <li>Parcel</li>
+              </ul>
+              <a
+                href="https://github.com/with0p/forkify"
+                class="project__github"
+                target="_blank"
+                ><img
+                  src="src/img/GitHub_Logo.png"
+                  alt="git"
+                  class="project__github--logo"
+              /></a>
+            </div>
+          </div>
+          <div class="project nexter">
+            <img
+              src="src/img/projects_icons/nexter.png"
+              alt="nexter"
+              class="project__logo"
+            />
+            <a
+              href="https://with0p.github.io/nexter/"
+              class="project__name"
+              target="_blank"
+              >Nexter</a
+            >
+            <div class="project__desc">
+              <p>Недвижимость и риэлторские услуги</p>
+              <ul>
+                <li>HTML/CSS</li>
+                <li>Grid</li>
+                <li>Адаптивная верстка</li>
+              </ul>
+              <a
+                href="https://github.com/with0p/nexter"
+                class="project__github"
+                target="_blank"
+                ><img
+                  src="src/img/GitHub_Logo.png"
+                  alt="git"
+                  class="project__github--logo"
+              /></a>
+            </div>
+          </div>
+        </div>
       </section>
-      <section class="experience">
+      <section class="experience" id="exp">
         <p class="heading-1">опыт в IT</p>
         <div class="exp-chart">
           <div class="exp-chart__workplace exp-chart__workplace--1">
             <p class="heading-3">Magenta Development</p>
             <p class="paragraph">QA Mobile</p>
-</div>
+          </div>
           <div class="exp-chart__workplace exp-chart__workplace--2">
             <p class="heading-3">Gazprom Transgaz</p>
             <p class="paragraph">Programmer</p>
-</div>
+          </div>
           <div class="exp-chart__workplace exp-chart__workplace--3">
             <p class="heading-3">CardsMobile</p>
             <p class="paragraph">QA Mobile</p>
-
-</div>
+          </div>
           <div class="exp-chart__workplace exp-chart__workplace--4">
             <p class="heading-3">Yandex Money</p>
             <p class="paragraph">QA Engineer</p>
-
-</div>
+          </div>
           <div class="exp-chart__workplace exp-chart__workplace--5">
             <p class="heading-3">Yandex Money</p>
             <p class="paragraph">Project Manager</p>
-
-</div>
+          </div>
           <div class="exp-chart__workplace exp-chart__workplace--6">
             <p class="heading-3">Yandex Money</p>
             <p class="paragraph">System Analyst</p>
-
-</div>
+          </div>
           <div class="exp-chart__time exp-chart__time--1">03 | 2013</div>
           <div class="exp-chart__time exp-chart__time--2">02 | 2015</div>
           <div class="exp-chart__time exp-chart__time--3">12 | 2015</div>
@@ -177,27 +277,25 @@
           <div class="exp-chart__y exp-chart__y--6"></div>
         </div>
       </section>
-      <section class="contact">
+      <section class="contact" id="contacts">
         <p class="contact__heading heading-1">контакты</p>
         <div class="contacts">
           <a href="mailto:mariiazhakova@gmail.com" target="_blank">
-          <svg class="contacts__icon">
-            <use xlink:href="src/img/svg/symbol-defs.svg#icon-mail4"></use>
-          </svg>
-        </a>
-        <a href="skype:maria_appolonova&chat" target="_blank">
-          <svg class="contacts__icon">
-            <use xlink:href="src/img/svg/symbol-defs.svg#icon-skype1"></use>
-          </svg>
-        </a>
-        <a href="https://t.me/m_zhakova" target="_blank">
-          <svg class="contacts__icon">
-            <use xlink:href="src/img/svg/symbol-defs.svg#icon-telegram"></use>
-          </svg>
-        </a>
+            <svg class="contacts__icon">
+              <use xlink:href="src/img/svg/symbol-defs.svg#icon-mail4"></use>
+            </svg>
+          </a>
+          <a href="skype:maria_appolonova&chat" target="_blank">
+            <svg class="contacts__icon">
+              <use xlink:href="src/img/svg/symbol-defs.svg#icon-skype1"></use>
+            </svg>
+          </a>
+          <a href="https://t.me/m_zhakova" target="_blank">
+            <svg class="contacts__icon">
+              <use xlink:href="src/img/svg/symbol-defs.svg#icon-telegram"></use>
+            </svg>
+          </a>
         </div>
-
-
       </section>
       <footer class="footer">
         <p class="footer__copy">maria zhakova. 2021</p>
