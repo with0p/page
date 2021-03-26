@@ -1,0 +1,11 @@
+.footer {
+  padding: 1rem;
+
+  &__copy {
+    text-align: center;
+    text-transform: lowercase;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: $color-purple;
+  }
+}

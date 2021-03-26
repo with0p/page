@@ -1,0 +1,112 @@
+.projects-gallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(20rem, 30rem));
+  grid-gap: 3rem;
+  justify-content: center;
+
+  @media screen and(max-width: $media-query-for-m) {
+    grid-template-columns: repeat(2, minmax(20rem, 30rem));
+  }
+  @media screen and(max-width: $media-query-for-s) {
+    grid-template-columns: repeat(1, minmax(20rem, 30rem));
+  }
+}
+
+.project {
+  padding: 2rem;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  transition: all 0.3s;
+  border-radius: 1rem;
+  background-color: $color-purple-transparent;
+
+  &__logo {
+    height: 5rem;
+    @media screen and(max-width: $media-query-for-l) {
+      height: 4rem;
+    }
+  }
+
+  &__name {
+    display: block;
+    margin: 1rem 0;
+
+    &:link,
+    &:visited {
+      text-decoration: none;
+      text-align: center;
+      font-size: 2rem;
+      text-transform: lowercase;
+      font-weight: 400;
+      border-bottom: 1px solid transparent;
+      transition: all 0.3s;
+    }
+  }
+
+  &__list-icon {
+    margin-right: 1rem;
+    svg {
+      width: 8px;
+      height: 8px;
+    }
+  }
+  &__desc {
+    p {
+      font-size: 1.3rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-style: italic;
+      text-transform: lowercase;
+    }
+    ul {
+      list-style: none;
+      font-size: 1.6rem;
+      font-weight: 400;
+      li {
+        border-bottom: rgb(255, 255, 255) 1px solid;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        &::before {
+          content: "\2022";
+          font-size: 2rem;
+          margin-right: 0.8rem;
+        }
+      }
+    }
+  }
+
+  &__github--logo {
+    display: block;
+    height: 2.5rem;
+    margin: 0 auto;
+    filter: opacity(30%);
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s;
+  }
+
+  &:hover &__github--logo {
+    filter: opacity(80%);
+  }
+
+  &.omni {
+    @include project-color($color-omnifood);
+  }
+  &.mapty {
+    @include project-color($color-mapty);
+  }
+  &.natour {
+    @include project-color($color-natour);
+  }
+  &.trillo {
+    @include project-color($color-trillo);
+  }
+  &.forkify {
+    @include project-color($color-forkify);
+  }
+  &.nexter {
+    @include project-color($color-nexter);
+  }
+}

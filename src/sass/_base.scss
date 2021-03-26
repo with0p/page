@@ -13,6 +13,12 @@ $color-forkify: #f48982;
 $color-trillo: #ff3366;
 $color-nexter: #c69963;
 
+$media-query-for-xl: 68.75em; // 1100px
+$media-query-for-l: 56.25em; // 900px
+$media-query-for-m: 43.75em; // 700px
+$media-query-for-s: 31.25em; // 500px
+$media-query-for-xs: 18.75em; // 300px
+
 *,
 *::before,
 *::after {
@@ -25,12 +31,18 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  @media screen and(max-width: $media-query-for-m) {
+    font-size: 56.25%;
+  }
+  @media screen and(max-width: $media-query-for-s) {
+    font-size: 50%;
+  }
+  @media screen and(max-width: $media-query-for-xs) {
+    font-size: 43.75%;
+  }
 }
 
 .container {
-  // display: grid;
-  // grid-template-columns: [ls-start] 1fr [ls-end cont-start] 4fr [cont-end rs-start] 1fr [rs-end];
-
   display: flex;
   flex-direction: column;
   background-image: linear-gradient(

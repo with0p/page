@@ -18,14 +18,21 @@ body,
   font-size: 4rem;
   font-weight: 700;
   text-transform: uppercase;
-  // -webkit-text-stroke: $color-purple 1px;
-  // color: transparent;
   margin-bottom: 4rem;
   letter-spacing: 0.5rem;
   text-align: center;
 
   color: $color-blue;
   text-shadow: 0px 1px 0px #627e9a9e;
+
+  @media screen and(max-width: $media-query-for-xl) {
+    font-size: 3.7rem;
+  }
+  @media screen and(max-width: $media-query-for-l) {
+    margin-bottom: 2.5rem;
+    font-size: 3rem;
+    text-shadow: none;
+  }
 }
 
 .heading-2 {
@@ -40,9 +47,18 @@ body,
   font-size: 2rem;
   color: $color-purple;
   font-weight: 600;
+  @media screen and(max-width: $media-query-for-xl) {
+    font-size: 1.7rem;
+  }
 }
 
 .paragraph {
   font-size: 1.6rem;
   text-transform: uppercase;
+  @media screen and(max-width: $media-query-for-xl) {
+    font-size: 1.5rem;
+  }
+  @media screen and(max-width: $media-query-for-xs) {
+    font-size: 1.2rem;
+  }
 }

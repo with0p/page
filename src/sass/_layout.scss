@@ -1,49 +1,50 @@
-.header {
-  grid-column: ls-start/rs-end;
-  height: 100vh;
-  // background-image: linear-gradient(to right, rgba(#fff, 0.7), rgba(#fff, 0.7)),
-  //   url(../img/intro1.jpg);
+section {
+  padding: 10rem 0;
+  @media screen and(max-width: $media-query-for-xl) {
+    padding: 7rem 0;
+  }
+  @media screen and(max-width: $media-query-for-l) {
+    padding: 3rem 0;
+  }
+}
 
-  // background-size: contain;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  // flex-direction: column;
+.header {
+  height: 100vh;
   background-color: $color-purple-transparent;
 
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   justify-items: center;
+  align-items: center;
+
+  @media screen and(max-width: $media-query-for-xs) {
+    height: 60vh;
+  }
 }
 
 .projects {
-  grid-column: cont-start/cont-end;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 10rem 0;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .experience {
-  grid-column: ls-start/rs-end;
   background-color: $color-purple-transparent;
-  padding: 3rem 0 10rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .contact {
-  grid-column: cont-start/cont-end;
   display: flex;
   flex-direction: column;
   justify-self: center;
   align-items: center;
-  padding: 3rem 0;
 }
 
 .footer {
   background-color: $color-purple-transparent;
-  grid-column: ls-start/rs-end;
 }

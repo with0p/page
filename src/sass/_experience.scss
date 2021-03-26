@@ -1,0 +1,210 @@
+.exp-chart {
+  padding: 4rem;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(6, minmax(min-content, max-content));
+  justify-items: center;
+  grid-gap: 2rem;
+  grid-template-areas:
+    "w1 . w3 . w5 ."
+    "t1 t2 t3 t4 t5 t6"
+    ". w2 . w4 . w6";
+
+  &__workplace {
+    padding: 2rem;
+    z-index: 2;
+    border-radius: 1rem;
+    box-shadow: inset 0 0 4px 0px $color-purple;
+    background-color: rgba(#fff, 0.3);
+    text-align: center;
+    @media screen and(max-width: $media-query-for-xl) {
+      padding: 1rem;
+    }
+    @media screen and(max-width: $media-query-for-xs) {
+      padding: 0.3rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    &--1 {
+      grid-area: w1;
+    }
+    &--2 {
+      grid-area: w2;
+    }
+    &--3 {
+      grid-area: w3;
+    }
+    &--4 {
+      grid-area: w4;
+    }
+    &--5 {
+      grid-area: w5;
+    }
+    &--6 {
+      grid-area: w6;
+    }
+  }
+  &__x {
+    width: 100%;
+    height: 3px;
+    background-color: rgba($color-brick, 0.4);
+    grid-area: t1 / t1 / t6 / t6;
+    align-self: center;
+  }
+
+  &__y {
+    width: 3px;
+    height: 100%;
+    &--1,
+    &--3,
+    &--5 {
+      background-image: linear-gradient(
+        to top,
+        rgba($color-purple, 0.4) 5.4rem,
+        transparent 5.4rem
+      );
+    }
+    &--2,
+    &--4,
+    &--6 {
+      background-image: linear-gradient(
+        to bottom,
+        rgba($color-purple, 0.4) 5.4rem,
+        transparent 5.4rem
+      );
+    }
+
+    &--1 {
+      grid-row: w1 / t1;
+      grid-column: w1 / span 1;
+    }
+    &--2 {
+      grid-row: t2 / w2;
+      grid-column: w2 / span 1;
+    }
+    &--3 {
+      grid-row: w3 / t3;
+      grid-column: w3 / span 1;
+    }
+    &--4 {
+      grid-row: t4 / w4;
+      grid-column: w4 / span 1;
+    }
+    &--5 {
+      grid-row: w5 / t5;
+      grid-column: w5 / span 1;
+    }
+    &--6 {
+      grid-row: t6 / w6;
+      grid-column: w6 / span 1;
+    }
+  }
+
+  &__time {
+    padding: 0.6rem 1rem;
+    color: #fff;
+    justify-self: center;
+    background-color: $color-blue;
+    box-shadow: 0 0 2px 0px $color-blue;
+    border-radius: 1rem;
+    text-transform: lowercase;
+    font-size: 1.6rem;
+    font-weight: 600;
+    z-index: 2;
+
+    &--1 {
+      grid-area: t1;
+    }
+    &--2 {
+      grid-area: t2;
+    }
+    &--3 {
+      grid-area: t3;
+    }
+    &--4 {
+      grid-area: t4;
+    }
+    &--5 {
+      grid-area: t5;
+    }
+    &--6 {
+      grid-area: t6;
+    }
+  }
+
+  @media screen and(max-width: $media-query-for-l) {
+    padding: 2rem;
+    grid-template-columns: max-content max-content max-content;
+    grid-template-areas:
+      "w1 t1 ."
+      ". t2 w2"
+      "w3 t3 ."
+      ". t4 w4"
+      "w5 t5 ."
+      ". t6 w6";
+    align-items: center;
+    justify-items: stretch;
+    &__x {
+      width: 3px;
+      height: 100%;
+      grid-row: t1 / t6;
+      grid-column: t1 / span 1;
+      justify-self: center;
+    }
+    &__y {
+      height: 3px;
+      width: 100%;
+
+      &--1 {
+        grid-row: w1 / span 1;
+        grid-column: w1 / t1;
+      }
+      &--2 {
+        grid-column: t2 / w2;
+        grid-row: w2 / span 1;
+      }
+      &--3 {
+        grid-column: w3 / t3;
+        grid-row: w3 / span 1;
+      }
+      &--4 {
+        grid-column: t4 / w4;
+        grid-row: w4 / span 1;
+      }
+      &--5 {
+        grid-column: w5 / t5;
+        grid-row: w5 / span 1;
+      }
+      &--6 {
+        grid-column: t6 / w6;
+        grid-row: w6 / span 1;
+      }
+
+      &--1,
+      &--3,
+      &--5 {
+        background-image: linear-gradient(
+          to left,
+          rgba($color-purple, 0.4) 11rem,
+          transparent 11rem
+        );
+      }
+      &--2,
+      &--4,
+      &--6 {
+        background-image: linear-gradient(
+          to right,
+          rgba($color-purple, 0.4) 11rem,
+          transparent 11rem
+        );
+      }
+    }
+  }
+
+  @media screen and(max-width: $media-query-for-s) {
+    grid-template-columns: min-content max-content min-content;
+  }
+}
