@@ -1,10 +1,10 @@
 .header {
   &__person {
+    grid-row: 2 / 3;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 3rem;
-    background-color: rgba(255, 255, 255, 0.767);
+    background-color: rgba($color-white-transparent, 0.2);
   }
 
   &__photo {
@@ -12,7 +12,7 @@
     border-radius: 50%;
     margin-right: 15rem;
     padding: 5px;
-    border: 1px solid $color-purple;
+    border: 2px solid $color-brick;
   }
 
   &__info {
@@ -26,12 +26,13 @@
     font-weight: 400;
 
     span {
-      color: transparent;
-      -webkit-text-stroke: $color-purple 1px;
+      // color: transparent;
+      // -webkit-text-stroke: $color-purple 1px;
       font-weight: 700;
       text-transform: capitalize;
       text-transform: uppercase;
-      font-size: 2.5rem;
+      font-size: 2.3rem;
+      color: $color-blue;
     }
 
     a {
@@ -40,17 +41,16 @@
       &:visited {
         text-decoration: none;
         border-bottom: 2px solid transparent;
-        color: currentColor;
-        text-shadow: 0px 0px 2px #b3d6f6;
-        animation: neon-text 2s infinite;
+        color: $color-brick;
+        opacity: 0.9;
         display: inline-block;
         transition: all 0.3s;
       }
 
       &:hover {
-        text-shadow: 0px 0px 0px transparent;
-        border-bottom: 2px solid $color-purple;
+        border-bottom: 2px solid $color-brick;
         transform: translateY(-2px);
+        opacity: 1;
       }
     }
   }
@@ -59,7 +59,7 @@
 .projects-gallery {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 30rem));
+  grid-template-columns: repeat(3, minmax(20rem, 30rem));
   grid-gap: 3rem;
   justify-content: center;
 }
@@ -71,7 +71,7 @@
   justify-items: center;
   transition: all 0.3s;
   border-radius: 1rem;
-  background-color: rgba($color-purple, 0.05);
+  background-color: $color-purple-transparent;
 
   &__logo {
     height: 5rem;
@@ -213,7 +213,7 @@
   &__x {
     width: 100%;
     height: 3px;
-    background-color: rgba($color-purple, 0.4);
+    background-color: rgba($color-brick, 0.4);
     grid-area: t1 / t1 / t6 / t6;
     align-self: center;
     // width: 3px;
@@ -278,8 +278,8 @@
     padding: 0.6rem 1rem;
     color: #fff;
     justify-self: center;
-    background-color: $color-purple;
-    box-shadow: 0 0 4px 0px $color-purple;
+    background-color: $color-blue;
+    box-shadow: 0 0 2px 0px $color-blue;
     border-radius: 1rem;
     text-transform: lowercase;
     font-size: 1.6rem;
@@ -306,7 +306,34 @@
     }
   }
 }
-
+.contact {
+  position: relative;
+  &__email {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    padding: 0.6rem 1rem;
+    background-color: $color-purple;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 1rem;
+    filter: opacity(40%);
+    transition: all 0.3s;
+    &:hover {
+      filter: opacity(100%);
+    }
+  }
+  &__icon {
+    width: 5rem;
+    height: 5rem;
+    fill: $color-purple;
+    filter: opacity(40%);
+    transition: all 0.3s;
+    &:hover {
+      filter: opacity(100%);
+      transform: translateY(-2px);
+    }
+  }
+}
 .contacts {
   display: flex;
   width: 100%;
@@ -320,7 +347,34 @@
     transition: all 0.3s;
     &:hover {
       filter: opacity(100%);
+      transform: translateY(-2px);
     }
+  }
+}
+
+.button-up {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  right: 5rem;
+  bottom: 3.3rem;
+  border-radius: 50%;
+  border: 1px solid $color-brick;
+  text-align: center;
+  transition: all 0.3s;
+  &:link,
+  &:visited {
+    background-color: transparent;
+    color: $color-brick;
+    -webkit-text-stroke: $color-brick 1px;
+    text-decoration: none;
+    font-size: 3.3rem;
+    filter: opacity(90%);
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    filter: opacity(100%);
   }
 }
 
@@ -330,7 +384,7 @@
   &__copy {
     text-align: center;
     text-transform: lowercase;
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 400;
     color: $color-purple;
   }

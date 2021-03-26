@@ -18,21 +18,14 @@ body,
   font-size: 4rem;
   font-weight: 700;
   text-transform: uppercase;
-  -webkit-text-stroke: $color-purple 1px;
-  color: #fff;
+  // -webkit-text-stroke: $color-purple 1px;
+  // color: transparent;
   margin-bottom: 4rem;
   letter-spacing: 0.5rem;
   text-align: center;
 
-  &::after {
-    content: "";
-    display: none;
-    width: 100%;
-    height: 0.5rem;
-    color: white;
-    box-shadow: 0 0 2rem 0 #0061f3;
-    border-radius: 1rem;
-  }
+  color: $color-blue;
+  text-shadow: 0px 1px 0px #627e9a9e;
 }
 
 .heading-2 {

@@ -5,14 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,600;1,300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,300&display=swap"
       rel="stylesheet"
     />
@@ -24,7 +16,7 @@
   </head>
   <body>
     <div class="container">
-      <header class="header">
+      <header class="header" id="header">
         <div class="header__person">
           <img
             src="src/img/header-photo.jpg"
@@ -32,7 +24,6 @@
             class="header__photo"
           />
           <div class="header__info">
-            <!-- <p ><span>Привет</span></p> -->
             <p>
               <span>Привет</span>,<br />Меня зовут <span>Маша</span><br />Я хочу
               создавать удобные и красивые <span>интерфейсы</span>
@@ -44,8 +35,8 @@
             </p>
             <p>
               Мои <a href="#projects">учебные проекты</a>,
-              <a href="#exp">опыт работы</a> и <a href="#contacts">контакты</a>
-              <span> &#11167;</span>
+              <a href="#exp">опыт работы</a> и
+              <a href="#contacts">контакты</a>&#11167;
             </p>
           </div>
         </div>
@@ -279,23 +270,13 @@
       </section>
       <section class="contact" id="contacts">
         <p class="contact__heading heading-1">контакты</p>
-        <div class="contacts">
-          <a href="mailto:mariiazhakova@gmail.com" target="_blank">
-            <svg class="contacts__icon">
-              <use xlink:href="src/img/svg/symbol-defs.svg#icon-mail4"></use>
-            </svg>
-          </a>
-          <a href="skype:maria_appolonova&chat" target="_blank">
-            <svg class="contacts__icon">
-              <use xlink:href="src/img/svg/symbol-defs.svg#icon-skype1"></use>
-            </svg>
-          </a>
-          <a href="https://t.me/m_zhakova" target="_blank">
-            <svg class="contacts__icon">
-              <use xlink:href="src/img/svg/symbol-defs.svg#icon-telegram"></use>
-            </svg>
-          </a>
-        </div>
+        <div class="contact__email">mariiazhakova@gmail.com</div>
+        <a href="https://t.me/m_zhakova" target="_blank">
+          <svg class="contact__icon">
+            <use xlink:href="src/img/svg/symbol-defs.svg#icon-telegram"></use>
+          </svg>
+        </a>
+        <a href="#header" class="button-up">&#11165;</a>
       </section>
       <footer class="footer">
         <p class="footer__copy">maria zhakova. 2021</p>

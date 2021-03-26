@@ -11,9 +11,9 @@ html {
   scroll-behavior: smooth; }
 
 .container {
-  display: grid;
-  grid-template-columns: [ls-start] 1fr [ls-end cont-start] 4fr [cont-end rs-start] 1fr [rs-end];
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(../img/background5.jpg);
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../img/header.jpg);
   background-size: cover; }
 
 body {
@@ -37,19 +37,11 @@ body,
   font-size: 4rem;
   font-weight: 700;
   text-transform: uppercase;
-  -webkit-text-stroke: #627e9a 1px;
-  color: #fff;
   margin-bottom: 4rem;
   letter-spacing: 0.5rem;
-  text-align: center; }
-  .heading-1::after {
-    content: "";
-    display: none;
-    width: 100%;
-    height: 0.5rem;
-    color: white;
-    box-shadow: 0 0 2rem 0 #0061f3;
-    border-radius: 1rem; }
+  text-align: center;
+  color: #96b3d0;
+  text-shadow: 0px 1px 0px #627e9a9e; }
 
 .heading-2 {
   font-size: 3rem;
@@ -68,15 +60,12 @@ body,
   text-transform: uppercase; }
 
 .header {
-  padding: 10rem 0;
   grid-column: ls-start/rs-end;
   height: 100vh;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../img/intro1.jpg);
-  background-size: contain;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column; }
+  background-color: rgba(98, 126, 154, 0.1);
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  justify-items: center; }
 
 .projects {
   grid-column: cont-start/cont-end;
@@ -88,7 +77,7 @@ body,
 
 .experience {
   grid-column: ls-start/rs-end;
-  background-color: rgba(98, 126, 154, 0.05);
+  background-color: rgba(98, 126, 154, 0.1);
   padding: 3rem 0 10rem 0;
   display: flex;
   flex-direction: column;
@@ -99,28 +88,26 @@ body,
   display: flex;
   flex-direction: column;
   justify-self: center;
-  align-items: stretch;
+  align-items: center;
   padding: 3rem 0; }
-  .contact__heading {
-    margin-bottom: 2rem; }
 
 .footer {
-  background-color: rgba(98, 126, 154, 0.05);
+  background-color: rgba(98, 126, 154, 0.1);
   grid-column: ls-start/rs-end; }
 
 .header__person {
+  grid-row: 2 / 3;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 3rem;
-  background-color: rgba(255, 255, 255, 0.767); }
+  background-color: rgba(255, 255, 255, 0.2); }
 
 .header__photo {
   height: 25rem;
   border-radius: 50%;
   margin-right: 15rem;
   padding: 5px;
-  border: 1px solid #627e9a; }
+  border: 2px solid #c88c7f; }
 
 .header__info {
   padding: 3rem 0;
@@ -132,29 +119,27 @@ body,
   font-size: 3rem;
   font-weight: 400; }
   .header__info span {
-    color: transparent;
-    -webkit-text-stroke: #627e9a 1px;
     font-weight: 700;
     text-transform: capitalize;
     text-transform: uppercase;
-    font-size: 2.5rem; }
+    font-size: 2.3rem;
+    color: #96b3d0; }
   .header__info a:link, .header__info a:active, .header__info a:visited {
     text-decoration: none;
     border-bottom: 2px solid transparent;
-    color: currentColor;
-    text-shadow: 0px 0px 2px #b3d6f6;
-    animation: neon-text 2s infinite;
+    color: #c88c7f;
+    opacity: 0.9;
     display: inline-block;
     transition: all 0.3s; }
   .header__info a:hover {
-    text-shadow: 0px 0px 0px transparent;
-    border-bottom: 2px solid #627e9a;
-    transform: translateY(-2px); }
+    border-bottom: 2px solid #c88c7f;
+    transform: translateY(-2px);
+    opacity: 1; }
 
 .projects-gallery {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 30rem));
+  grid-template-columns: repeat(3, minmax(20rem, 30rem));
   grid-gap: 3rem;
   justify-content: center; }
 
@@ -165,7 +150,7 @@ body,
   justify-items: center;
   transition: all 0.3s;
   border-radius: 1rem;
-  background-color: rgba(98, 126, 154, 0.05); }
+  background-color: rgba(98, 126, 154, 0.1); }
   .project__logo {
     height: 5rem; }
   .project__name {
@@ -317,7 +302,7 @@ body,
   .exp-chart__x {
     width: 100%;
     height: 3px;
-    background-color: rgba(98, 126, 154, 0.4);
+    background-color: rgba(200, 140, 127, 0.4);
     grid-area: t1 / t1 / t6 / t6;
     align-self: center; }
   .exp-chart__y {
@@ -349,8 +334,8 @@ body,
     padding: 0.6rem 1rem;
     color: #fff;
     justify-self: center;
-    background-color: #627e9a;
-    box-shadow: 0 0 4px 0px #627e9a;
+    background-color: #96b3d0;
+    box-shadow: 0 0 2px 0px #96b3d0;
     border-radius: 1rem;
     text-transform: lowercase;
     font-size: 1.6rem;
@@ -369,6 +354,30 @@ body,
     .exp-chart__time--6 {
       grid-area: t6; }
 
+.contact {
+  position: relative; }
+  .contact__email {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    padding: 0.6rem 1rem;
+    background-color: #627e9a;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 1rem;
+    filter: opacity(40%);
+    transition: all 0.3s; }
+    .contact__email:hover {
+      filter: opacity(100%); }
+  .contact__icon {
+    width: 5rem;
+    height: 5rem;
+    fill: #627e9a;
+    filter: opacity(40%);
+    transition: all 0.3s; }
+    .contact__icon:hover {
+      filter: opacity(100%);
+      transform: translateY(-2px); }
+
 .contacts {
   display: flex;
   width: 100%;
@@ -381,13 +390,35 @@ body,
     filter: opacity(40%);
     transition: all 0.3s; }
     .contacts__icon:hover {
-      filter: opacity(100%); }
+      filter: opacity(100%);
+      transform: translateY(-2px); }
+
+.button-up {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  right: 5rem;
+  bottom: 3.3rem;
+  border-radius: 50%;
+  border: 1px solid #c88c7f;
+  text-align: center;
+  transition: all 0.3s; }
+  .button-up:link, .button-up:visited {
+    background-color: transparent;
+    color: #c88c7f;
+    -webkit-text-stroke: #c88c7f 1px;
+    text-decoration: none;
+    font-size: 3.3rem;
+    filter: opacity(90%); }
+  .button-up:hover {
+    transform: translateY(-2px);
+    filter: opacity(100%); }
 
 .footer {
   padding: 1rem; }
   .footer__copy {
     text-align: center;
     text-transform: lowercase;
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 400;
     color: #627e9a; }

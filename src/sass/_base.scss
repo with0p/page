@@ -1,6 +1,10 @@
 $font-color-primary: #777777;
 $color-grey: #e7e4e4;
 $color-purple: #627e9a;
+$color-blue: #96b3d0;
+$color-brick: #c88c7f;
+$color-purple-transparent: rgba($color-purple, 0.1);
+$color-white-transparent: rgba(#fff, 0.6);
 
 $color-omnifood: #e67e22;
 $color-mapty: #00c46a;
@@ -24,9 +28,16 @@ html {
 }
 
 .container {
-  display: grid;
-  grid-template-columns: [ls-start] 1fr [ls-end cont-start] 4fr [cont-end rs-start] 1fr [rs-end];
-  background-image: linear-gradient(to right, rgba(#fff, 0.9), rgba(#fff, 0.9)),
-    url(../img/background5.jpg);
+  // display: grid;
+  // grid-template-columns: [ls-start] 1fr [ls-end cont-start] 4fr [cont-end rs-start] 1fr [rs-end];
+
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(
+      to right,
+      $color-white-transparent,
+      $color-white-transparent
+    ),
+    url(../img/header.jpg);
   background-size: cover;
 }

@@ -1,15 +1,19 @@
 .header {
-  padding: 10rem 0;
   grid-column: ls-start/rs-end;
   height: 100vh;
-  background-image: linear-gradient(to right, rgba(#fff, 0.7), rgba(#fff, 0.7)),
-    url(../img/intro1.jpg);
+  // background-image: linear-gradient(to right, rgba(#fff, 0.7), rgba(#fff, 0.7)),
+  //   url(../img/intro1.jpg);
 
-  background-size: contain;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  // background-size: contain;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // flex-direction: column;
+  background-color: $color-purple-transparent;
+
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  justify-items: center;
 }
 
 .projects {
@@ -23,7 +27,7 @@
 
 .experience {
   grid-column: ls-start/rs-end;
-  background-color: rgba($color-purple, 0.05);
+  background-color: $color-purple-transparent;
   padding: 3rem 0 10rem 0;
   display: flex;
   flex-direction: column;
@@ -35,14 +39,11 @@
   display: flex;
   flex-direction: column;
   justify-self: center;
-  align-items: stretch;
+  align-items: center;
   padding: 3rem 0;
-  &__heading {
-    margin-bottom: 2rem;
-  }
 }
 
 .footer {
-  background-color: rgba($color-purple, 0.05);
+  background-color: $color-purple-transparent;
   grid-column: ls-start/rs-end;
 }
