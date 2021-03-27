@@ -17,9 +17,14 @@ section {
   justify-items: center;
   align-items: center;
 
-  @media screen and(max-width: $media-query-for-xs) {
-    height: 60vh;
+  @media screen and(max-width: $media-query-for-l) and(orientation:landscape),
+    (max-width: $media-query-for-xs) {
+    height: auto;
   }
+
+  // @media screen and(max-width: $media-query-for-xs) {
+  //   height: 60vh;
+  // }
 }
 
 .projects {

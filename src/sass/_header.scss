@@ -2,24 +2,21 @@
   &__neon {
     font-size: 9rem;
     color: #f4f9ff;
-    text-shadow: 0 0 10px #ce9c92;
+    text-shadow: 0 0 5px $color-brick-neon;
     -webkit-text-stroke: #ce9c9282 2px;
     font-weight: 200;
     @media screen and(max-width: $media-query-for-xl) {
-      font-size: 6rem;
+      font-size: 8rem;
       -webkit-text-stroke: #ce9c9282 1px;
     }
 
-    @media screen and(max-width: $media-query-for-l) {
-      font-size: 5rem;
-      color: rgba(#fff, 0.5);
-    }
-    @media screen and(max-width: $media-query-for-l) {
-      font-size: 4rem;
+    @media screen and(max-width: $media-query-for-m) {
+      font-size: 7rem;
       color: rgba(#fff, 0.8);
     }
+
     @media screen and(max-width: $media-query-for-xs) {
-      font-size: 3rem;
+      font-size: 5rem;
     }
   }
   &__person {
@@ -45,6 +42,9 @@
     @media screen and(max-width: $media-query-for-l) {
       margin-right: 7rem;
     }
+    @media screen and(max-width: $media-query-for-l) and(orientation: landscape) {
+      height: 20rem;
+    }
     @media screen and(max-width: $media-query-for-m) {
       height: 25rem;
       margin: 0;
@@ -61,7 +61,7 @@
     color: $color-purple;
     text-transform: uppercase;
     font-size: 2.5rem;
-    font-weight: 200;
+    font-weight: 400;
 
     @media screen and(max-width: $media-query-for-xl) {
       font-size: 2.3rem;
@@ -69,8 +69,14 @@
     @media screen and(max-width: $media-query-for-l) {
       width: 100%;
     }
+
     @media screen and(max-width: $media-query-for-m) {
+      grid-gap: 3rem;
       width: 80%;
+    }
+
+    @media screen and(max-width: $media-query-for-s) {
+      font-size: 1.9rem;
     }
     @media screen and(max-width: $media-query-for-xs) {
       font-size: 1.7rem;
@@ -81,23 +87,17 @@
       &:active,
       &:visited {
         text-decoration: none;
-        // border-bottom: 2px solid transparent;
         color: $color-brick;
         opacity: 0.9;
         display: inline-block;
         transition: all 0.3s;
       }
 
-      //   &:hover {
-      //     border-bottom: 2px solid $color-brick;
-      //     transform: translateY(-2px);
-      //     opacity: 1;
-      //   }
       &:hover {
         transform: translateY(-2px);
         &::after {
           border: 1px solid #ce9c9282;
-          box-shadow: 0 0 3px 0 $color-brick;
+          box-shadow: 0 0 3px 0 $color-brick-neon;
         }
       }
 
@@ -112,5 +112,8 @@
         transition: all 0.3s;
       }
     }
+  }
+  &__icon {
+    height: 100%;
   }
 }
