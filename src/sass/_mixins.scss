@@ -8,9 +8,6 @@
   .project__name,
   .project__desc li:before {
     @include background-image-gradient($color);
-    // svg {
-    //   fill: $color;
-    // }
   }
   &:hover {
     .project__name,
@@ -21,60 +18,5 @@
   }
   .project__name:hover {
     color: darken($color, 10%);
-  }
-}
-
-@mixin neon-text-green($color) {
-  animation: neon-green 4s infinite;
-
-  @keyframes neon-green {
-    0% {
-      text-shadow: 0px 0px 7px rgba($color, 0);
-      -webkit-text-stroke: $color-purple 1px;
-    }
-    30% {
-      text-shadow: 0px 0px 12px rgba($color, 0.4);
-      -webkit-text-stroke: rgba($color-purple, 0.2) 1px;
-      color: #fff;
-    }
-    50% {
-      text-shadow: 0px 0px 12px rgba($color, 0.2);
-      -webkit-text-stroke: rgba($color-purple, 0.6) 1px;
-      color: rgba(255, 255, 255, 0.336);
-    }
-    70% {
-      text-shadow: 0px 0px 12px rgba($color, 0.4);
-      -webkit-text-stroke: rgba($color-purple, 0.2) 1px;
-      color: #fff;
-    }
-
-    100% {
-      text-shadow: 0px 0px 7px rgba($color, 0.1);
-      -webkit-text-stroke: $color-purple 1px;
-      color: transparent;
-    }
-  }
-}
-
-@mixin neon-box-green($color) {
-  animation: neon-box-green 4s infinite;
-
-  @keyframes neon-box-green {
-    0% {
-      box-shadow: 0 0 1rem rgba($color, 0.8);
-    }
-    30% {
-      box-shadow: 0 0 2rem rgba($color, 1);
-    }
-    50% {
-      box-shadow: 0 0 1.5rem rgba($color, 0.7);
-    }
-    70% {
-      box-shadow: 0 0 2rem rgba($color, 1);
-    }
-
-    90% {
-      box-shadow: 0 0 1rem rgba($color, 0.8);
-    }
   }
 }

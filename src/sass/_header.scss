@@ -2,9 +2,13 @@
   &__neon {
     font-size: 9rem;
     color: #f4f9ff;
-    text-shadow: 0 0 5px $color-brick-neon;
     -webkit-text-stroke: #ce9c9282 2px;
     font-weight: 200;
+    position: relative;
+    text-shadow: 0 0 5px transparent;
+
+    transition: text-shadow 0.3s;
+
     @media screen and(max-width: $media-query-for-xl) {
       font-size: 8rem;
       -webkit-text-stroke: #ce9c9282 1px;
@@ -17,6 +21,33 @@
 
     @media screen and(max-width: $media-query-for-xs) {
       font-size: 5rem;
+    }
+
+    .btn {
+      position: absolute;
+      top: 26px;
+      left: 3px;
+      height: 1rem;
+      width: 1rem;
+      border: 1px solid #96b3d0;
+      border-radius: 50%;
+      text-shadow: none;
+      -webkit-text-stroke: 0;
+      color: #96b3d0;
+      font-size: 1.5rem;
+      padding: 0.5rem;
+      display: block;
+      transition: all 0.5s;
+      animation: jump 1.5s infinite;
+
+      cursor: pointer;
+      &:focus {
+        outline: none;
+      }
+
+      @media screen and(max-width: $media-query-for-xl) {
+        visibility: hidden;
+      }
     }
   }
   &__person {
@@ -91,6 +122,7 @@
         opacity: 0.9;
         display: inline-block;
         transition: all 0.3s;
+        outline: none;
       }
 
       &:hover {
@@ -115,5 +147,49 @@
   }
   &__icon {
     height: 100%;
+  }
+}
+
+.on {
+  text-shadow: 0 0 5px $color-brick-neon;
+  animation: neon 2s ease-in-out infinite;
+  .btn {
+    transform: scale(0.7) translateY(0);
+    border: solid 1px transparent;
+    box-shadow: 0 0 5px 0 $color-brick-neon;
+    animation: none;
+  }
+
+  @media screen and(max-width: $media-query-for-xl) {
+    text-shadow: 0 0 5px transparent;
+    animation: none;
+  }
+}
+
+@keyframes neon {
+  0% {
+    text-shadow: 0 0 5px $color-brick-neon;
+  }
+
+  50% {
+    text-shadow: 0 0 10px $color-brick-neon;
+  }
+
+  100% {
+    text-shadow: 0 0 5px $color-brick-neon;
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(3px);
+  }
+
+  50% {
+    transform: translateY(-1px);
+  }
+
+  100% {
+    transform: translateY(3px);
   }
 }
