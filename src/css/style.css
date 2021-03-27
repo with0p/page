@@ -275,11 +275,11 @@ section {
 
 @keyframes jump {
   0% {
-    transform: translateY(3px); }
+    transform: translateY(2px); }
   50% {
     transform: translateY(-1px); }
   100% {
-    transform: translateY(3px); } }
+    transform: translateY(2px); } }
 
 .projects-gallery {
   width: 100%;
