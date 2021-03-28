@@ -3,6 +3,7 @@
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(6, minmax(min-content, max-content));
+  grid-template-rows: repeat(3, min-content);
   justify-items: center;
   grid-gap: 2rem;
   grid-template-areas:
@@ -34,6 +35,16 @@
 
     &--1 {
       grid-area: w1;
+      position: relative;
+
+      &::after {
+        content: "";
+        height: 3px;
+        width: calc(2rem);
+        position: absolute;
+        top: 50%;
+        right: 0;
+      }
     }
     &--2 {
       grid-area: w2;
