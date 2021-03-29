@@ -130,6 +130,11 @@
         &::after {
           border: 1px solid #ce9c9282;
           box-shadow: 0 0 3px 0 $color-brick-neon;
+          @media screen and(max-width: $media-query-for-m) {
+            border: none;
+            border-bottom: 1px solid #ce9c9282;
+            box-shadow: none;
+          }
         }
       }
 
@@ -142,6 +147,12 @@
         border: 1px solid transparent;
         box-shadow: 0 0 3px 0 transparent;
         transition: all 0.3s;
+        @media screen and(max-width: $media-query-for-m) {
+          height: 1px;
+          border: none;
+          border-bottom: 1px solid transparent;
+          box-shadow: none;
+        }
       }
     }
   }

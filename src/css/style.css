@@ -27,27 +27,19 @@ html {
 
 .button-up {
   position: fixed;
-  width: 4rem;
-  height: 4rem;
-  font-size: 2.6rem;
   right: 1rem;
   bottom: 3rem;
-  border-radius: 50%;
-  border: 1px solid #c88c7f;
   visibility: hidden;
-  text-align: center;
-  transition: all 0.3s; }
-  @media screen and (max-width: 56.25em) {
-    .button-up {
-      width: 3rem;
-      height: 3rem;
-      font-size: 1.9rem; } }
-  .button-up:link, .button-up:visited {
-    background-color: transparent;
-    color: #c88c7f;
-    -webkit-text-stroke: #c88c7f 1px;
-    text-decoration: none;
-    filter: opacity(50%); }
+  transition: all 0.3s;
+  filter: opacity(50%); }
+  .button-up svg {
+    width: 4rem;
+    height: 4rem;
+    fill: #c88c7f; }
+    @media screen and (max-width: 56.25em) {
+      .button-up svg {
+        width: 3rem;
+        height: 3rem; } }
   .button-up:hover {
     transform: translateY(-2px);
     filter: opacity(100%); }
@@ -269,6 +261,11 @@ section {
     .header__info a:hover::after {
       border: 1px solid #ce9c9282;
       box-shadow: 0 0 3px 0 #d8290a; }
+      @media screen and (max-width: 43.75em) {
+        .header__info a:hover::after {
+          border: none;
+          border-bottom: 1px solid #ce9c9282;
+          box-shadow: none; } }
   .header__info a::after {
     content: "";
     display: block;
@@ -278,6 +275,12 @@ section {
     border: 1px solid transparent;
     box-shadow: 0 0 3px 0 transparent;
     transition: all 0.3s; }
+    @media screen and (max-width: 43.75em) {
+      .header__info a::after {
+        height: 1px;
+        border: none;
+        border-bottom: 1px solid transparent;
+        box-shadow: none; } }
 
 .header__icon {
   height: 100%; }
