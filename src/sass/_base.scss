@@ -58,10 +58,12 @@ html {
 
 .button-up {
   position: fixed;
-  width: 5rem;
-  height: 5rem;
-  right: 5rem;
-  bottom: 3.3rem;
+  width: 4rem;
+  height: 4rem;
+  font-size: 2.6rem;
+
+  right: 1rem;
+  bottom: 3rem;
   border-radius: 50%;
   border: 1px solid $color-brick;
   visibility: hidden;
@@ -69,11 +71,9 @@ html {
   transition: all 0.3s;
 
   @media screen and(max-width: $media-query-for-l) {
-    width: 4rem;
-    height: 4rem;
-  }
-  @media screen and(max-width: $media-query-for-xs) {
-    right: 2.5rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.9rem;
   }
 
   &:link,
@@ -82,11 +82,7 @@ html {
     color: $color-brick;
     -webkit-text-stroke: $color-brick 1px;
     text-decoration: none;
-    font-size: 3.3rem;
-    filter: opacity(90%);
-    @media screen and(max-width: $media-query-for-l) {
-      font-size: 2.7rem;
-    }
+    filter: opacity(50%);
   }
 
   &:hover {
