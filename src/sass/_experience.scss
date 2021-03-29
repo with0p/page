@@ -153,6 +153,8 @@
   @media screen and(max-width: $media-query-for-l) {
     padding: 2rem;
     grid-template-columns: max-content max-content max-content;
+    grid-template-rows: repeat(6, min-content);
+
     grid-template-areas:
       "w1 t1 ."
       ". t2 w2"

@@ -7,8 +7,7 @@
 
 html {
   font-size: 62.5%;
-  box-sizing: border-box;
-  scroll-behavior: smooth; }
+  box-sizing: border-box; }
   @media screen and (max-width: 43.75em) {
     html {
       font-size: 56.25%; } }
@@ -23,7 +22,43 @@ html {
   display: flex;
   flex-direction: column;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../img/header.jpg);
-  background-size: cover; }
+  background-size: cover;
+  position: relative; }
+
+.button-up {
+  position: fixed;
+  width: 5rem;
+  height: 5rem;
+  right: 5rem;
+  bottom: 3.3rem;
+  border-radius: 50%;
+  border: 1px solid #c88c7f;
+  visibility: hidden;
+  text-align: center;
+  transition: all 0.3s; }
+  @media screen and (max-width: 56.25em) {
+    .button-up {
+      width: 4rem;
+      height: 4rem; } }
+  @media screen and (max-width: 18.75em) {
+    .button-up {
+      right: 2.5rem; } }
+  .button-up:link, .button-up:visited {
+    background-color: transparent;
+    color: #c88c7f;
+    -webkit-text-stroke: #c88c7f 1px;
+    text-decoration: none;
+    font-size: 3.3rem;
+    filter: opacity(90%); }
+    @media screen and (max-width: 56.25em) {
+      .button-up:link, .button-up:visited {
+        font-size: 2.7rem; } }
+  .button-up:hover {
+    transform: translateY(-2px);
+    filter: opacity(100%); }
+
+.visible {
+  visibility: visible; }
 
 body {
   font-family: "Nunito Sans", sans-serif; }
@@ -528,6 +563,7 @@ section {
     .exp-chart {
       padding: 2rem;
       grid-template-columns: max-content max-content max-content;
+      grid-template-rows: repeat(6, min-content);
       grid-template-areas: "w1 t1 ." ". t2 w2" "w3 t3 ." ". t4 w4" "w5 t5 ." ". t6 w6";
       align-items: center;
       justify-items: stretch; }
@@ -596,37 +632,6 @@ section {
     .contact__icon:hover {
       filter: opacity(100%);
       transform: translateY(-2px); }
-
-.button-up {
-  position: absolute;
-  width: 5rem;
-  height: 5rem;
-  right: 5rem;
-  bottom: 3.3rem;
-  border-radius: 50%;
-  border: 1px solid #c88c7f;
-  text-align: center;
-  transition: all 0.3s; }
-  @media screen and (max-width: 56.25em) {
-    .button-up {
-      width: 4rem;
-      height: 4rem; } }
-  @media screen and (max-width: 18.75em) {
-    .button-up {
-      right: 2.5rem; } }
-  .button-up:link, .button-up:visited {
-    background-color: transparent;
-    color: #c88c7f;
-    -webkit-text-stroke: #c88c7f 1px;
-    text-decoration: none;
-    font-size: 3.3rem;
-    filter: opacity(90%); }
-    @media screen and (max-width: 56.25em) {
-      .button-up:link, .button-up:visited {
-        font-size: 2.7rem; } }
-  .button-up:hover {
-    transform: translateY(-2px);
-    filter: opacity(100%); }
 
 .footer {
   padding: 1rem; }
