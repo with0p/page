@@ -27,32 +27,19 @@ html {
 
 .button-up {
   position: fixed;
-  width: 5rem;
-  height: 5rem;
-  right: 5rem;
-  bottom: 3.3rem;
-  border-radius: 50%;
-  border: 1px solid #c88c7f;
+  right: 1rem;
+  bottom: 3rem;
   visibility: hidden;
-  text-align: center;
-  transition: all 0.3s; }
-  @media screen and (max-width: 56.25em) {
-    .button-up {
-      width: 4rem;
-      height: 4rem; } }
-  @media screen and (max-width: 18.75em) {
-    .button-up {
-      right: 2.5rem; } }
-  .button-up:link, .button-up:visited {
-    background-color: transparent;
-    color: #c88c7f;
-    -webkit-text-stroke: #c88c7f 1px;
-    text-decoration: none;
-    font-size: 3.3rem;
-    filter: opacity(90%); }
+  transition: all 0.3s;
+  filter: opacity(50%); }
+  .button-up svg {
+    width: 4rem;
+    height: 4rem;
+    fill: #c88c7f; }
     @media screen and (max-width: 56.25em) {
-      .button-up:link, .button-up:visited {
-        font-size: 2.7rem; } }
+      .button-up svg {
+        width: 3rem;
+        height: 3rem; } }
   .button-up:hover {
     transform: translateY(-2px);
     filter: opacity(100%); }
@@ -274,6 +261,11 @@ section {
     .header__info a:hover::after {
       border: 1px solid #ce9c9282;
       box-shadow: 0 0 3px 0 #d8290a; }
+      @media screen and (max-width: 43.75em) {
+        .header__info a:hover::after {
+          border: none;
+          border-bottom: 1px solid #ce9c9282;
+          box-shadow: none; } }
   .header__info a::after {
     content: "";
     display: block;
@@ -283,6 +275,12 @@ section {
     border: 1px solid transparent;
     box-shadow: 0 0 3px 0 transparent;
     transition: all 0.3s; }
+    @media screen and (max-width: 43.75em) {
+      .header__info a::after {
+        height: 1px;
+        border: none;
+        border-bottom: 1px solid transparent;
+        box-shadow: none; } }
 
 .header__icon {
   height: 100%; }
@@ -471,9 +469,9 @@ section {
   .exp-chart__workplace {
     padding: 2rem;
     z-index: 2;
+    position: relative;
     border-radius: 1rem;
     box-shadow: inset 0 0 4px 0px #627e9a;
-    background-color: rgba(255, 255, 255, 0.3);
     text-align: center; }
     .exp-chart__workplace:hover {
       background-color: rgba(255, 255, 255, 0.6); }
@@ -486,15 +484,7 @@ section {
     .exp-chart__workplace p {
       margin-bottom: 1rem; }
     .exp-chart__workplace--1 {
-      grid-area: w1;
-      position: relative; }
-      .exp-chart__workplace--1::after {
-        content: "";
-        height: 3px;
-        width: calc(2rem);
-        position: absolute;
-        top: 50%;
-        right: 0; }
+      grid-area: w1; }
     .exp-chart__workplace--2 {
       grid-area: w2; }
     .exp-chart__workplace--3 {
@@ -505,37 +495,24 @@ section {
       grid-area: w5; }
     .exp-chart__workplace--6 {
       grid-area: w6; }
+    .exp-chart__workplace::after {
+      content: "";
+      height: 2rem;
+      width: 3px;
+      position: absolute;
+      background-color: rgba(98, 126, 154, 0.4); }
+    .exp-chart__workplace--this-side::after {
+      left: 50%;
+      top: 100%; }
+    .exp-chart__workplace--other-side::after {
+      left: 50%;
+      top: -2rem; }
   .exp-chart__x {
     width: 100%;
     height: 3px;
     background-color: rgba(200, 140, 127, 0.4);
     grid-area: t1 / t1 / t6 / t6;
     align-self: center; }
-  .exp-chart__y {
-    width: 3px;
-    height: 100%; }
-    .exp-chart__y--1, .exp-chart__y--3, .exp-chart__y--5 {
-      background-image: linear-gradient(to top, rgba(98, 126, 154, 0.4) 5.4rem, transparent 5.4rem); }
-    .exp-chart__y--2, .exp-chart__y--4, .exp-chart__y--6 {
-      background-image: linear-gradient(to bottom, rgba(98, 126, 154, 0.4) 5.4rem, transparent 5.4rem); }
-    .exp-chart__y--1 {
-      grid-row: w1 / t1;
-      grid-column: w1 / span 1; }
-    .exp-chart__y--2 {
-      grid-row: t2 / w2;
-      grid-column: w2 / span 1; }
-    .exp-chart__y--3 {
-      grid-row: w3 / t3;
-      grid-column: w3 / span 1; }
-    .exp-chart__y--4 {
-      grid-row: t4 / w4;
-      grid-column: w4 / span 1; }
-    .exp-chart__y--5 {
-      grid-row: w5 / t5;
-      grid-column: w5 / span 1; }
-    .exp-chart__y--6 {
-      grid-row: t6 / w6;
-      grid-column: w6 / span 1; }
   .exp-chart__time {
     padding: 0.6rem 1rem;
     color: #fff;
@@ -567,71 +544,60 @@ section {
       grid-template-areas: "w1 t1 ." ". t2 w2" "w3 t3 ." ". t4 w4" "w5 t5 ." ". t6 w6";
       align-items: center;
       justify-items: stretch; }
+      .exp-chart__workplace::after {
+        height: 3px;
+        width: 2rem; }
+      .exp-chart__workplace--this-side::after {
+        top: 50%;
+        left: 100%; }
+      .exp-chart__workplace--other-side::after {
+        top: 50%;
+        left: -2rem; }
       .exp-chart__x {
         width: 3px;
         height: 100%;
         grid-row: t1 / t6;
         grid-column: t1 / span 1;
-        justify-self: center; }
-      .exp-chart__y {
-        height: 3px;
-        width: 100%; }
-        .exp-chart__y--1 {
-          grid-row: w1 / span 1;
-          grid-column: w1 / t1; }
-        .exp-chart__y--2 {
-          grid-column: t2 / w2;
-          grid-row: w2 / span 1; }
-        .exp-chart__y--3 {
-          grid-column: w3 / t3;
-          grid-row: w3 / span 1; }
-        .exp-chart__y--4 {
-          grid-column: t4 / w4;
-          grid-row: w4 / span 1; }
-        .exp-chart__y--5 {
-          grid-column: w5 / t5;
-          grid-row: w5 / span 1; }
-        .exp-chart__y--6 {
-          grid-column: t6 / w6;
-          grid-row: w6 / span 1; }
-        .exp-chart__y--1, .exp-chart__y--3, .exp-chart__y--5 {
-          background-image: linear-gradient(to left, rgba(98, 126, 154, 0.4) 11rem, transparent 11rem); }
-        .exp-chart__y--2, .exp-chart__y--4, .exp-chart__y--6 {
-          background-image: linear-gradient(to right, rgba(98, 126, 154, 0.4) 11rem, transparent 11rem); } }
+        justify-self: center; } }
   @media screen and (max-width: 31.25em) {
     .exp-chart {
       grid-template-columns: min-content max-content min-content; } }
 
-.contact {
-  position: relative; }
-  .contact__email {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    padding: 0.6rem 1rem;
-    background-color: #627e9a;
-    color: #fff;
-    font-weight: 700;
-    border-radius: 1rem;
-    filter: opacity(40%);
-    transition: all 0.3s; }
-    @media screen and (max-width: 56.25em) {
-      .contact__email {
-        font-size: 1.8rem; } }
-    .contact__email:hover {
-      filter: opacity(100%); }
-  .contact__icon {
-    width: 5rem;
-    height: 5rem;
-    fill: #627e9a;
-    filter: opacity(40%);
-    transition: all 0.3s; }
-    @media screen and (max-width: 56.25em) {
-      .contact__icon {
-        width: 4rem;
-        height: 4rem; } }
-    .contact__icon:hover {
-      filter: opacity(100%);
-      transform: translateY(-2px); }
+.contact__email {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  padding: 0.6rem 1rem;
+  background-color: #627e9a;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 1rem;
+  filter: opacity(40%);
+  transition: all 0.3s; }
+  @media screen and (max-width: 56.25em) {
+    .contact__email {
+      font-size: 1.8rem; } }
+  .contact__email:hover {
+    filter: opacity(100%); }
+
+.contact__icons {
+  display: flex;
+  justify-content: space-between; }
+  .contact__icons > * {
+    margin: 0 1rem; }
+
+.contact__icon {
+  width: 5rem;
+  height: 5rem;
+  fill: #627e9a;
+  filter: opacity(40%);
+  transition: all 0.3s; }
+  @media screen and (max-width: 56.25em) {
+    .contact__icon {
+      width: 4rem;
+      height: 4rem; } }
+  .contact__icon:hover {
+    filter: opacity(100%);
+    transform: translateY(-2px); }
 
 .footer {
   padding: 1rem; }

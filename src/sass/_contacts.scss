@@ -1,5 +1,4 @@
 .contact {
-  position: relative;
   &__email {
     font-size: 2rem;
     margin-bottom: 2rem;
@@ -17,6 +16,14 @@
 
     &:hover {
       filter: opacity(100%);
+    }
+  }
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+
+    & > * {
+      margin: 0 1rem;
     }
   }
   &__icon {
